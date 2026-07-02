@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aaron & Sons Plumbing Corp | Tulsa, OK | (539) 245-5409</title>
+<meta name="description" content="Aaron & Sons Plumbing Corp — 4.9 star rated, open 24 hours, serving Tulsa, OK. Emergency repair, drains, water heaters, remodels & more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-950:#0E1B24;
+    --navy-800:#16293A;
+    --steel-700:#284A63;
+    --steel-500:#3E6B87;
+    --copper-600:#B15E22;
+    --copper-500:#C6702B;
+    --copper-300:#E2A468;
+    --copper-100:#F3DCBD;
+    --cream-50:#F6F2EA;
+    --cream-100:#EFE8D9;
+    --ink-900:#152128;
+    --slate-600:#4C5D66;
+    --slate-400:#8296A1;
+    --white:#FFFFFF;
+    --radius-sm:4px;
+    --radius-md:8px;
+    --max-w:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
+  body{
+    margin:0;
+    background:var(--cream-50);
+    color:var(--ink-900);
+    font-family:'Work Sans',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Bebas Neue',sans-serif;
+    letter-spacing:0.02em;
+    line-height:0.95;
+    margin:0;
+    font-weight:400;
+  }
+  .mono{
+    font-family:'IBM Plex Mono',monospace;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:var(--max-w); margin:0 auto; padding:0 28px;}
+  section{position:relative;}
+  ::selection{background:var(--copper-300); color:var(--navy-950);}
+
+  /* Focus visibility */
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--copper-500);
+    outline-offset:3px;
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:var(--navy-950);
+    border-bottom:1px solid rgba(230,178,120,0.15);
+  }
+  .header-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 28px;
+    max-width:var(--max-w); margin:0 auto;
+  }
+  .brand{display:flex; align-items:center; gap:12px; color:var(--cream-50);}
+  .brand-mark{
+    width:42px; height:42px; flex:none;
+  }
+  .brand-text .display{font-size:22px; color:var(--white);}
+  .brand-text .sub{font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.18em; color:var(--copper-300); text-transform:uppercase;}
+  nav{display:flex; align-items:center; gap:28px;}
+  nav a.navlink{
+    font-size:14px; font-weight:500; color:var(--cream-100);
+    opacity:0.85; transition:opacity .15s ease;
+  }
+  nav a.navlink:hover{opacity:1; color:var(--copper-300);}
+  .call-btn{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--copper-500); color:var(--white);
+    padding:10px 18px; border-radius:var(--radius-sm);
+    font-weight:600; font-size:14px; white-space:nowrap;
+    transition:background .15s ease, transform .15s ease;
+  }
+  .call-btn:hover{background:var(--copper-600); transform:translateY(-1px);}
+  .call-btn svg{width:16px; height:16px;}
+  .nav-toggle{display:none;}
+
+  @media (max-width:860px){
+    nav .navlink{display:none;}
+    .header-inner{gap:12px;}
+  }
+
+  /* ---------- PIPE JOINT DIVIDER (signature element) ---------- */
+  .pipe-joint{
+    display:flex; align-items:center; gap:16px;
+    max-width:var(--max-w); margin:0 auto; padding:0 28px;
+  }
+  .pipe-joint .line{flex:1; height:2px; background:linear-gradient(90deg, transparent, var(--copper-500) 30%, var(--copper-500) 70%, transparent);}
+  .pipe-joint .hub{
+    flex:none; width:46px; height:46px; border-radius:50%;
+    background:var(--navy-950); border:2px solid var(--copper-500);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 0 0 4px var(--cream-50);
+  }
+  .pipe-joint .hub svg{width:22px; height:22px;}
+  .pipe-joint .label{
+    font-size:11px; color:var(--copper-600); white-space:nowrap;
+    flex:none;
+  }
+  .pipe-joint .label .num{color:var(--slate-400); margin-right:6px;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:
+      radial-gradient(ellipse at top right, rgba(198,112,43,0.18), transparent 55%),
+      linear-gradient(180deg, var(--navy-950) 0%, var(--navy-800) 100%);
+    color:var(--cream-50);
+    padding:88px 0 76px;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center;
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    font-size:11px; color:var(--copper-300); margin-bottom:22px;
+  }
+  .eyebrow .dot{width:6px; height:6px; border-radius:50%; background:var(--copper-500);}
+  .hero h1{
+    font-size:clamp(46px, 6.2vw, 84px);
+    color:var(--white);
+  }
+  .hero h1 .accent{color:var(--copper-400, var(--copper-300));}
+  .hero p.lede{
+    font-size:18px; line-height:1.6; color:var(--cream-100);
+    max-width:46ch; margin:26px 0 34px;
+  }
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:44px;}
+  .btn-primary{
+    background:var(--copper-500); color:var(--white);
+    padding:15px 26px; border-radius:var(--radius-sm);
+    font-weight:600; font-size:15px; display:inline-flex; align-items:center; gap:10px;
+    transition:background .15s ease, transform .15s ease;
+  }
+  .btn-primary:hover{background:var(--copper-600); transform:translateY(-1px);}
+  .btn-secondary{
+    background:transparent; color:var(--cream-50);
+    padding:15px 26px; border-radius:var(--radius-sm);
+    font-weight:600; font-size:15px; border:1px solid rgba(246,242,234,0.35);
+    transition:border-color .15s ease, background .15s ease;
+  }
+  .btn-secondary:hover{border-color:var(--copper-300); background:rgba(230,178,120,0.08);}
+  .trust-row{
+    display:flex; gap:34px; flex-wrap:wrap;
+    padding-top:28px; border-top:1px solid rgba(246,242,234,0.14);
+  }
+  .trust-item .num{font-family:'Bebas Neue'; font-size:30px; color:var(--white); line-height:1;}
+  .trust-item .cap{font-size:11px; color:var(--slate-400); margin-top:4px; letter-spacing:0.06em;}
+
+  /* Hero schematic art */
+  .hero-art{position:relative;}
+  .hero-art svg{width:100%; height:auto;}
+
+  /* ---------- SECTION HEADERS ---------- */
+  .section-pad{padding:96px 0;}
+  .section-head{max-width:640px; margin:0 auto 56px;}
+  .section-head .mono.tag{font-size:12px; color:var(--copper-600); margin-bottom:14px; display:block;}
+  .section-head h2{font-size:clamp(34px,4.4vw,52px); color:var(--navy-950);}
+  .section-head p{font-size:16px; color:var(--slate-600); margin-top:16px; line-height:1.6;}
+  .center{text-align:center; margin-left:auto; margin-right:auto;}
+
+  /* ---------- SERVICES ---------- */
+  .services-section{background:var(--cream-50);}
+  .services-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:2px;
+    background:var(--navy-950); border-radius:var(--radius-md); overflow:hidden;
+  }
+  .service-card{
+    background:var(--white); padding:34px 26px;
+    display:flex; flex-direction:column; gap:16px;
+    transition:background .18s ease;
+  }
+  .service-card:hover{background:var(--copper-100);}
+  .service-card .icon{
+    width:44px; height:44px; border-radius:50%;
+    background:var(--navy-950); display:flex; align-items:center; justify-content:center;
+  }
+  .service-card .icon svg{width:22px; height:22px; stroke:var(--copper-300);}
+  .service-card h3{font-family:'Work Sans'; font-weight:700; font-size:17px; text-transform:none; letter-spacing:0; color:var(--navy-950);}
+  .service-card p{font-size:14px; color:var(--slate-600); line-height:1.55; margin:0;}
+  @media (max-width:920px){ .services-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:560px){ .services-grid{grid-template-columns:1fr;} }
+
+  /* ---------- ABOUT / CREW ---------- */
+  .about-section{background:var(--navy-950); color:var(--cream-50);}
+  .about-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:64px; align-items:center;}
+  .about-section .section-head h2{color:var(--white);}
+  .about-section .section-head p{color:var(--slate-400);}
+  .about-copy p{font-size:16px; line-height:1.75; color:var(--cream-100); margin:0 0 18px;}
+  .crew-names{display:flex; gap:14px; margin-top:26px; flex-wrap:wrap;}
+  .crew-chip{
+    display:flex; align-items:center; gap:10px;
+    background:var(--navy-800); border:1px solid rgba(230,178,120,0.25);
+    padding:10px 16px; border-radius:40px; font-size:14px; color:var(--copper-300); font-weight:600;
+  }
+  .crew-chip .dot{width:8px; height:8px; border-radius:50%; background:var(--copper-500);}
+  .stat-panel{
+    background:var(--navy-800); border:1px solid rgba(230,178,120,0.18);
+    border-radius:var(--radius-md); padding:36px;
+    display:grid; grid-template-columns:1fr 1fr; gap:28px;
+  }
+  .stat-panel .stat .num{font-family:'Bebas Neue'; font-size:44px; color:var(--copper-300);}
+  .stat-panel .stat .cap{font-size:12px; color:var(--slate-400); margin-top:4px;}
+  @media (max-width:860px){ .about-grid{grid-template-columns:1fr;} }
+
+  /* ---------- REVIEWS ---------- */
+  .reviews-section{background:var(--cream-100);}
+  .rating-banner{
+    display:flex; align-items:center; justify-content:center; gap:22px;
+    margin-bottom:52px; flex-wrap:wrap;
+  }
+  .rating-banner .score{font-family:'Bebas Neue'; font-size:60px; color:var(--navy-950); line-height:1;}
+  .stars{color:var(--copper-500); font-size:20px; letter-spacing:2px;}
+  .rating-banner .rtext{font-size:14px; color:var(--slate-600);}
+  .reviews-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:22px;
+  }
+  .review-card{
+    background:var(--white); border-radius:var(--radius-md);
+    padding:26px; border:1px solid rgba(21,33,40,0.06);
+    display:flex; flex-direction:column; gap:14px;
+    box-shadow:0 1px 2px rgba(21,33,40,0.04);
+  }
+  .review-card .stars{font-size:14px; letter-spacing:1px;}
+  .review-card p{font-size:14.5px; line-height:1.6; color:var(--slate-600); margin:0; flex:1;}
+  .review-meta{display:flex; align-items:center; justify-content:space-between; margin-top:4px;}
+  .review-meta .name{font-weight:700; font-size:14px; color:var(--navy-950);}
+  .review-meta .when{font-size:11.5px; color:var(--slate-400); font-family:'IBM Plex Mono';}
+  @media (max-width:920px){ .reviews-grid{grid-template-columns:1fr 1fr;} }
+  @media (max-width:600px){ .reviews-grid{grid-template-columns:1fr;} }
+
+  /* ---------- CONTACT ---------- */
+  .contact-section{background:var(--navy-950); color:var(--cream-50);}
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:stretch;}
+  .contact-section .section-head h2{color:var(--white);}
+  .contact-section .section-head p{color:var(--slate-400);}
+  .contact-list{display:flex; flex-direction:column; gap:22px; margin-top:8px;}
+  .contact-item{display:flex; gap:16px; align-items:flex-start;}
+  .contact-item .icon{
+    width:40px; height:40px; border-radius:50%; flex:none;
+    background:var(--navy-800); border:1px solid rgba(230,178,120,0.25);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .contact-item .icon svg{width:18px; height:18px; stroke:var(--copper-300);}
+  .contact-item .label{font-size:11px; color:var(--slate-400); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:4px;}
+  .contact-item .val{font-size:17px; font-weight:600; color:var(--white);}
+  .contact-item .val a:hover{color:var(--copper-300);}
+  .map-wrap{
+    border-radius:var(--radius-md); overflow:hidden; border:1px solid rgba(230,178,120,0.18);
+    min-height:320px; background:var(--navy-800);
+  }
+  .map-wrap iframe{width:100%; height:100%; min-height:320px; border:0; filter:grayscale(0.15) contrast(1.05);}
+  @media (max-width:860px){ .contact-grid{grid-template-columns:1fr;} }
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--navy-950); border-top:1px solid rgba(230,178,120,0.12); color:var(--slate-400); padding:34px 0 100px;}
+  .footer-inner{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; font-size:13px;}
+  .footer-inner .fbrand{color:var(--cream-100); font-weight:600;}
+
+  /* ---------- STICKY MOBILE CALL BAR ---------- */
+  .mobile-call{
+    display:none;
+    position:fixed; bottom:0; left:0; right:0; z-index:200;
+    background:var(--copper-500); color:var(--white);
+    padding:14px 20px; align-items:center; justify-content:center; gap:10px;
+    font-weight:700; font-size:15px;
+    box-shadow:0 -4px 14px rgba(0,0,0,0.25);
+  }
+  @media (max-width:700px){
+    .mobile-call{display:flex;}
+    footer{padding-bottom:110px;}
+  }
+
+  /* fade-in on scroll */
+  .fade-in{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;}
+  .fade-in.visible{opacity:1; transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="24" cy="24" r="23" stroke="#C6702B" stroke-width="2"/>
+        <path d="M14 20h8v-6a4 4 0 0 1 4-4h0a4 4 0 0 1 4 4v2" stroke="#F6F2EA" stroke-width="2.2" stroke-linecap="round"/>
+        <rect x="14" y="20" width="20" height="8" rx="1.5" stroke="#F6F2EA" stroke-width="2.2"/>
+        <path d="M18 28v3a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3v-3" stroke="#C6702B" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">
+        <span class="display" style="display:block;">AARON &amp; SONS</span>
+        <span class="sub">Plumbing Corp · Tulsa OK</span>
+      </span>
+    </a>
+    <nav>
+      <a class="navlink" href="#services">Services</a>
+      <a class="navlink" href="#about">Why Us</a>
+      <a class="navlink" href="#reviews">Reviews</a>
+      <a class="navlink" href="#contact">Contact</a>
+      <a class="call-btn" href="tel:+15392455409">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (539) 245-5409
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow mono"><span class="dot"></span>Tulsa, OK &nbsp;·&nbsp; Family Owned &nbsp;·&nbsp; Open 24 Hours</div>
+        <h1>Plumbing done<br>right, <span class="accent">day or night.</span></h1>
+        <p class="lede">Aaron &amp; Sons Plumbing Corp has been Tulsa's call for everything from a 2am burst pipe to a full kitchen remodel — rated 4.9 stars by the neighbors who've had us out.</p>
+        <div class="hero-ctas">
+          <a class="btn-primary" href="tel:+15392455409">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call (539) 245-5409
+          </a>
+          <a class="btn-secondary" href="#services">See Our Services</a>
+        </div>
+        <div class="trust-row">
+          <div class="trust-item"><div class="num">4.9★</div><div class="cap mono">86 Google Reviews</div></div>
+          <div class="trust-item"><div class="num">24/7</div><div class="cap mono">Emergency Service</div></div>
+          <div class="trust-item"><div class="num">100%</div><div class="cap mono">Family Owned</div></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M60 20 V140 H210 V240 H360 V440" stroke="#3E6B87" stroke-width="14" stroke-linecap="round" fill="none" opacity="0.5"/>
+          <path d="M60 20 V140 H210 V240 H360 V440" stroke="#C6702B" stroke-width="4" stroke-linecap="round" fill="none" stroke-dasharray="2 14"/>
+          <circle cx="60" cy="20" r="10" fill="#0E1B24" stroke="#C6702B" stroke-width="3"/>
+          <circle cx="210" cy="140" r="14" fill="#16293A" stroke="#C6702B" stroke-width="3"/>
+          <circle cx="360" cy="240" r="14" fill="#16293A" stroke="#C6702B" stroke-width="3"/>
+          <circle cx="360" cy="440" r="10" fill="#0E1B24" stroke="#C6702B" stroke-width="3"/>
+          <g transform="translate(196,126)"><rect width="28" height="28" rx="4" fill="#C6702B"/><path d="M6 14 L22 14 M14 6 L14 22" stroke="#0E1B24" stroke-width="2.5"/></g>
+          <g transform="translate(346,226)"><rect width="28" height="28" rx="4" fill="#C6702B"/><path d="M6 14 L22 14 M14 6 L14 22" stroke="#0E1B24" stroke-width="2.5"/></g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="pipe-joint">
+    <span class="label mono"><span class="num">01</span>Services</span>
+    <div class="line"></div>
+    <div class="hub"><svg viewBox="0 0 24 24" fill="none" stroke="#C6702B" stroke-width="2"><path d="M12 2v6M12 16v6M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M2 12h6M16 12h6M4.9 19.1l4.2-4.2M14.9 9.1l4.2-4.2"/></svg></div>
+    <div class="line"></div>
+    <span class="label mono">Tulsa Metro</span>
+  </div>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="services-section section-pad" id="services">
+    <div class="wrap">
+      <div class="section-head center fade-in">
+        <span class="mono tag">What We Fix</span>
+        <h2>Repairs, installs &amp;<br>full remodels.</h2>
+        <p>Everything below is a job our customers have actually called us for — straight from what people told Google about working with us.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M4.9 4.9l2.8 2.8M2 12h4M4.9 19.1l2.8-2.8M12 18v4M16.3 16.3l2.8 2.8M18 12h4M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="4"/></svg></div>
+          <h3>24/7 Emergency Repair</h3>
+          <p>Burst pipe, no hot water, or sewage backup — we answer around the clock, every day of the year.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+          <h3>Drain, Sink &amp; Sewer Cleaning</h3>
+          <p>Stubborn clogs — kitchen sinks, tubs, and sewer lines — cleared without opening up a wall.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/></svg></div>
+          <h3>Water Heater Repair &amp; Install</h3>
+          <p>Tank and tankless repairs, replacements, and new installs sized right for your household.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
+          <h3>Leak Detection &amp; Repair</h3>
+          <p>Hidden leaks behind walls, under slabs, or around fixtures — found fast and fixed for good.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M6 21V9l6-6 6 6v12M10 21v-6h4v6"/></svg></div>
+          <h3>Kitchen &amp; Bath Remodeling</h3>
+          <p>Full remodels start to finish — design input, material selection, and construction, all handled.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5L12 3l9 6.5M5 9v11h14V9M9 20v-6h6v6"/></svg></div>
+          <h3>Whole-Home Renovation Plumbing</h3>
+          <p>Full house renovations, rerouted and rebuilt right — we stand behind the work through every change.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17V9a2 2 0 0 1 2-2h5V4h6v6h-3a2 2 0 0 0-2 2v5"/></svg></div>
+          <h3>Pipe Repair &amp; Replacement</h3>
+          <p>Aging galvanized and copper lines repaired or replaced before small issues become big ones.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <h3>Toilet &amp; Fixture Installation</h3>
+          <p>Toilets, sinks, faucets, and disposals installed, sealed, tested, and worn-out seals replaced.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg></div>
+          <h3>Heating &amp; Cooling Systems</h3>
+          <p>Steam heating system replacement and whole-house split A/C installs, done by the same crew.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v10M8 9l4 4 4-4"/><rect x="5" y="14" width="14" height="7" rx="1.5"/></svg></div>
+          <h3>Sump &amp; Grinder Pump Repair</h3>
+          <p>Failed or overflowing pumps diagnosed and fixed — including weekend and holiday calls.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a6 6 0 1 1-12 0c0-1 .5-2 1.5-3.5"/></svg></div>
+          <h3>Gas Line &amp; Fireplace Service</h3>
+          <p>Gas log fireplaces and appliance lines run and connected safely, up to code.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <h3>Free Estimates &amp; Quotes</h3>
+          <p>Upfront pricing before we start — several customers told us it came in lower than they expected.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="pipe-joint">
+    <span class="label mono"><span class="num">02</span>Why Us</span>
+    <div class="line"></div>
+    <div class="hub"><svg viewBox="0 0 24 24" fill="none" stroke="#C6702B" stroke-width="2"><path d="M20 21a8 8 0 1 0-16 0"/><circle cx="12" cy="8" r="5"/></svg></div>
+    <div class="line"></div>
+    <span class="label mono">The Crew</span>
+  </div>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="about-section section-pad" id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div>
+          <div class="section-head" style="margin-bottom:0;">
+            <span class="mono tag">Why Tulsa Calls Us</span>
+            <h2>Ask around — you'll<br>hear the same two names.</h2>
+          </div>
+          <div class="about-copy" style="margin-top:26px;">
+            <p>Scroll through our reviews and two names keep showing up, job after job, year after year: Melvin and Brian. Customers ask for them by name, request them again for the next project, and tell their neighbors to do the same.</p>
+            <p>That's the whole idea behind Aaron &amp; Sons — plumbers Tulsa homeowners trust enough to hand over a key, a quote, or a 2am phone call.</p>
+          </div>
+          <div class="crew-names">
+            <div class="crew-chip"><span class="dot"></span>Melvin</div>
+            <div class="crew-chip"><span class="dot"></span>Brian</div>
+          </div>
+        </div>
+        <div class="stat-panel">
+          <div class="stat"><div class="num">4.9★</div><div class="cap mono">Average Rating</div></div>
+          <div class="stat"><div class="num">86</div><div class="cap mono">Google Reviews</div></div>
+          <div class="stat"><div class="num">24/7</div><div class="cap mono">Open Every Hour</div></div>
+          <div class="stat"><div class="num">Tulsa</div><div class="cap mono">Locally Based</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="pipe-joint">
+    <span class="label mono"><span class="num">03</span>Reviews</span>
+    <div class="line"></div>
+    <div class="hub"><svg viewBox="0 0 24 24" fill="none" stroke="#C6702B" stroke-width="2"><path d="M12 2l2.9 6.6 7.1.6-5.4 4.6 1.7 6.9L12 17l-6.3 3.7 1.7-6.9L2 8.2l7.1-.6z"/></svg></div>
+    <div class="line"></div>
+    <span class="label mono">Google</span>
+  </div>
+
+  <!-- ================= REVIEWS ================= -->
+  <section class="reviews-section section-pad" id="reviews">
+    <div class="wrap">
+      <div class="section-head center fade-in">
+        <span class="mono tag">Straight From Google</span>
+        <h2>What Tulsa is saying.</h2>
+      </div>
+      <div class="rating-banner fade-in">
+        <div class="score">4.9</div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <div class="rtext">86 verified Google reviews</div>
+        </div>
+      </div>
+      <div class="reviews-grid">
+
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p>Had a full kitchen and hall bathroom remodel done. From the first design conversation through material choices and final construction, everything was handled well — completely satisfied.</p>
+          <div class="review-meta"><span class="name">Martha Tanner</span><span class="when">A week ago</span></div>
+        </div>
+
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p>Home renovations rarely go exactly as planned, but Brian and Melvin stood behind their work the whole way through our full house renovation — clear communication and fair when changes came up.</p>
+          <div class="review-meta"><span class="name">Mariah Patrick</span><span class="when">2 weeks ago</span></div>
+        </div>
+
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p>Called them for two big jobs: a steam heating system replacement with a new water heater, and later a whole-house split A/C install for our two-family home. Great both times.</p>
+          <div class="review-meta"><span class="name">Haley M.</span><span class="when">8 months ago</span></div>
+        </div>
+
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p>First time using them and Melvin was fantastic. Called in the afternoon about a clogged kitchen sink right before a family dinner — handled with time to spare.</p>
+          <div class="review-meta"><span class="name">Ebony Villegas</span><span class="when">8 months ago</span></div>
+        </div>
+
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p>A genuinely tricky job at our house — not a quick fix, lots of careful planning needed. Melvin and the crew handled it with real skill from start to finish.</p>
+          <div class="review-meta"><span class="name">Natasha Perez</span><span class="when">8 months ago</span></div>
+        </div>
+
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p>Water was backing up around the toilet and into the tub. One plumber blamed our water use — the plumber from Aaron &amp; Sons actually looked closer and found the real problem.</p>
+          <div class="review-meta"><span class="name">Jason Herman</span><span class="when">8 months ago</span></div>
+        </div>
+
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p>Been calling them for my gas log fireplace and other plumbing needs for years. When my usual plumber wasn't available, they got me scheduled quickly anyway.</p>
+          <div class="review-meta"><span class="name">Nora M.</span><span class="when">7 months ago</span></div>
+        </div>
+
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p>Needed a new water heater and got quotes from several plumbers first — most were expensive and uninterested in actually helping. Aaron &amp; Sons was the opposite.</p>
+          <div class="review-meta"><span class="name">Joanna D.</span><span class="when">8 months ago</span></div>
+        </div>
+
+        <div class="review-card fade-in">
+          <div class="stars">★★★★★</div>
+          <p>Other plumbers said they'd need to tear into the wall and ceiling to reach a stubborn clogged bathtub drain. Aaron &amp; Sons found a better way in.</p>
+          <div class="review-meta"><span class="name">Damon Stuart</span><span class="when">8 months ago</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="pipe-joint">
+    <span class="label mono"><span class="num">04</span>Contact</span>
+    <div class="line"></div>
+    <div class="hub"><svg viewBox="0 0 24 24" fill="none" stroke="#C6702B" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+    <div class="line"></div>
+    <span class="label mono">Tulsa, OK</span>
+  </div>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact-section section-pad" id="contact">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:44px;">
+        <span class="mono tag">Get In Touch</span>
+        <h2>Open 24 hours.<br>Call whenever you need us.</h2>
+        <p>No answering machine at 2am — just a real person who can get a plumber on the way.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-list">
+          <div class="contact-item fade-in">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div>
+              <div class="label mono">Call Anytime</div>
+              <div class="val"><a href="tel:+15392455409">(539) 245-5409</a></div>
+            </div>
+          </div>
+          <div class="contact-item fade-in">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div>
+              <div class="label mono">Address</div>
+              <div class="val">11670 E 51st St #3300<br>Tulsa, OK 74146</div>
+            </div>
+          </div>
+          <div class="contact-item fade-in">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+            <div>
+              <div class="label mono">Hours</div>
+              <div class="val">Open 24 Hours — Every Day</div>
+            </div>
+          </div>
+          <a class="btn-primary" style="align-self:flex-start; margin-top:8px;" href="https://www.google.com/maps/dir/?api=1&destination=11670+E+51st+St+%233300+Tulsa+OK+74146" target="_blank" rel="noopener">
+            Get Directions
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="map-wrap fade-in">
+          <iframe
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=11670+E+51st+St+%233300+Tulsa+OK+74146&output=embed"
+            title="Map to Aaron & Sons Plumbing Corp"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div><span class="fbrand">Aaron &amp; Sons Plumbing Corp</span> · 11670 E 51st St #3300, Tulsa, OK 74146 · Open 24 Hours</div>
+    <div>© <span id="year"></span> Aaron &amp; Sons Plumbing Corp. All rights reserved.</div>
+  </div>
+</footer>
+
+<a class="mobile-call" href="tel:+15392455409">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Call Now — (539) 245-5409
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, {threshold:0.12});
+  document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+</script>
+
+</body>
+</html>
